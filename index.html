@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Anotações</title>
+</head>
+<body>
+
+    <div class="container-anotacao">
+        
+    </div><!--container-anotacao-->
+    <div class="btn_add">+</div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        
+        
+        $(function(){
+            var el = '<div id = "single" class="anotacao-single"><button class = "botao" onclick = "del()">X</button><textarea placeholder="Sua nova anotação.."></textarea></div>';
+            $('.btn_add').click(function(){
+                $('.container-anotacao').append(el);
+            });
+        });
+
+        function del(){
+            var del = document.getElementById('single');
+            del.remove();
+        }
+             
+       
+    </script>
+</body>
+</html>
